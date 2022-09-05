@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mission 2</title>
+    <link rel="stylesheet" href="Assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pagescene">
+        <div class="bulan"></div>
+        <img src="Assets/forest.png" class="hutan">
+        <img src="Assets/cloud1.png" class="awan1">
+        <img src="Assets/cloud2.png" class="awan2">
+        <img src="Assets/cloud3.png" class="awan3">
+        <img src="Assets/cloud1.png" class="awan4">
+        <img src="Assets/cloud2.png" class="awan5">
+        <img src="Assets/cloud3.png" class="awan6">
+        <h1>Starry Night</h1>
+    </div>
+    <script type="text/javascript">
+        function stars(){
+            let count = 500;
+            let scene = document.querySelector('.pagescene');
+            let i = 0;
+            while(i < count){
+                let star = document.createElement("i");
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let y = Math.floor(Math.random() * window.innerHeight);
+                let duration = Math.random() * 10;
+                let size = Math.random() * 2;
+
+                star.style.left = x+'px';
+                star.style.top = y+'px';
+                star.style.width = 1+size+'px';
+                star.style.height = 1+size+'px';
+
+                star.style.animationDuration = 5+duration +'s';
+                star.style.animationDelay = duration+'s';
+
+                scene.appendChild(star);
+                i++
+            }
+        }
+        stars();
+    </script>
+
+
+</body>
+</html>
